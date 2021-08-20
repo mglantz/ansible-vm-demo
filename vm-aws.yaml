@@ -2,7 +2,7 @@
   connection: local
   gather_facts: False
   vars_files:
-    - vars/vars.yml
+    - vars/vars.yaml
   tasks:
   - name: Download regular hosts user data file
     get_url:
@@ -14,7 +14,6 @@
     file:
       path: "./vm_instances.out"
       state: touch
-
   - name: Ensure a security group for VM systems is in place
     ec2_group:
       name: "{{ ec2_security_group_vm_systems }}"
@@ -27,7 +26,6 @@
           from_port: 22
           to_port: 22
           cidr_ip: 0.0.0.0/0
-#          group_name: "{{ ec2_security_group_tower}}"
         - proto: tcp
           from_port: 80
           to_port: 80
@@ -40,10 +38,6 @@
           from_port: 8080
           to_port: 8080
           cidr_ip: 0.0.0.0/0
-#        - proto: icmp
-#          from_port: -1
-#          to_port: -1
-#          group_name: "{{ ec2_security_group_tower}}"
       rules_egress:
         - proto: all
           cidr_ip: 0.0.0.0/0
