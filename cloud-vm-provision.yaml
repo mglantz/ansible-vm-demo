@@ -1,0 +1,3 @@
+---
+- import_playbook: aws-vm.yml
+- import_playbook: azure-vm.yml
