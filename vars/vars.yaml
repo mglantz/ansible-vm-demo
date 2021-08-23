@@ -1,4 +1,5 @@
 ---
+# Amazon EC2
 ec2_access_key: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           31373661343662653138643462613264366562343864333032343136663031326238643531326365
@@ -18,4 +19,16 @@ ec2_key: ec2-ssh-key-needs-to-be-default-from-place-you-run-playbook
 ec2_region: eu-west-1, or whatever-you-like
 ec2_security_group_vm_systems: ansible-vm-demo
 ec2_ami_id: ami-07dfba995513840b5, RHEL8.2 standard image in EU-CENTRAL, may need to change
-ec2_number_of_client_systems: 3
+ec2_number_of_vm: 3
+
+# Azure
+azure_resource_group: demo
+azure_location: northeurope
+azure_storage_type: Standard_LRS
+azure_os_disk_type: StandardSSD_LRS
+azure_vm_size: Standard_B1s
+azure_admin_username: rheldemo
+azure_ssh_pub_key:
+azure_image: rhel8-gm
+azure_vm_prefix: azure
+azure_number_of_vm: 2
