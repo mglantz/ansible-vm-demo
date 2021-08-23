@@ -17,5 +17,5 @@ ec2_secret_key: !vault |
 ec2_key: ec2-ssh-key-needs-to-be-default-from-place-you-run-playbook
 ec2_region: eu-west-1, or whatever-you-like
 ec2_security_group_vm_systems: ansible-vm-demo
-ami_id: ami-07dfba995513840b5, RHEL8.2 standard image in EU-CENTRAL, may need to change
-number_of_client_systems: 3
+ec2_ami_id: ami-07dfba995513840b5, RHEL8.2 standard image in EU-CENTRAL, may need to change
+ec2_number_of_client_systems: 3
