@@ -134,20 +134,3 @@
     retries: 500
     delay: 4
     with_items: "{{ vm.results }}"
-
-- name: "[Play 2] Post Configuration of VMs"
-  hosts: just_created_vms
-  become: true
-  vars:
-
-  tasks:
-  - include_role:
-      name: ansible-role-rhsm
-
-  - include_role:
-      name: redhatinsights.insights-client
-    vars:
-      insights_display_name: "{{ ansible_hostname }}"
-
-  - include_role:
-      name: ansible-role-openscap
