@@ -53,7 +53,7 @@
       image: "{{ ec2_ami_id }}"
       user_data: "{{ lookup('file', '/tmp/host-prep.sh') }}"
       wait: true
-      exact_count: "{{ ec2_number_of_client_systems }}"
+      exact_count: "{{ ec2_number_of_vm }}"
       count_tag:
         identity: system
       instance_tags:
