@@ -16,10 +16,10 @@ ec2_secret_key: !vault |
           33613731393037393636306533303730373330353439643030636463366130343232386466343039
           3763373634353134653637373766633364393761623334623762
 ec2_key: ec2-ssh-key-needs-to-be-default-from-place-you-run-playbook
-ec2_region: eu-west-1, or whatever-you-like
+ec2_region: eu-central
 ec2_security_group_vm_systems: ansible-vm-demo
-ec2_ami_id: ami-07dfba995513840b5, RHEL8.2 standard image in EU-CENTRAL, may need to change
-ec2_number_of_vm: 3
+ec2_ami_id: ami-06ec8443c2a35b0baandard # RHEL 8 image in EU-CENTRAL, may need to change
+ec2_number_of_vm: 1
 
 # Azure
 azure_resource_group: demo
