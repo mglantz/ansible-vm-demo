@@ -1,5 +1,5 @@
 ---
-- name: prepare
+- name: Install the baseline for all Java platforms
   hosts: all
   become: yes
   gather_facts: no
