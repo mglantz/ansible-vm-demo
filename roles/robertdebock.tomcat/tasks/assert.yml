@@ -105,12 +105,12 @@
       - tomcat_shutdown_port < 65536
     quiet: yes
 
-- name: test if tomcat_ajp_enabled is set correctly
-  ansible.builtin.assert:
-    that:
-      - tomcat_ajp_enabled is defined
-      - tomcat_ajp_enabled is boolean
-    quiet: yes
+#- name: test if tomcat_ajp_enabled is set correctly
+#  ansible.builtin.assert:
+#    that:
+#      - tomcat_ajp_enabled is defined
+#      - tomcat_ajp_enabled is boolean
+#    quiet: yes
 
 - name: test if tomcat_ajp_port is set correctly
   ansible.builtin.assert:
