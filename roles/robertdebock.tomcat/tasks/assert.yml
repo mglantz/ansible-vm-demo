@@ -146,12 +146,12 @@
       - tomcat_service_state in [ "reloaded", "restarted", "started", "stopped" ]
     quiet: yes
 
-- name: test if tomcat_service_enabled is set correctly
-  ansible.builtin.assert:
-    that:
-      - tomcat_service_enabled is defined
-      - tomcat_service_enabled is boolean
-    quiet: yes
+#- name: test if tomcat_service_enabled is set correctly
+#  ansible.builtin.assert:
+#    that:
+#      - tomcat_service_enabled is defined
+#      - tomcat_service_enabled is boolean
+#    quiet: yes
 
 - name: test if tomcat_instances is set correctly
   ansible.builtin.assert:
