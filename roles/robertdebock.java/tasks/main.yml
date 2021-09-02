@@ -72,7 +72,7 @@
     - java_vendor == "oracle"
 
 - name: set alternative (targz)
-  community.general.alternatives:
+  alternatives:
     name: java
     link: /usr/bin/java
     path: "{{ java_install_directory }}/{{ java_oracle_directory }}/bin/java"
