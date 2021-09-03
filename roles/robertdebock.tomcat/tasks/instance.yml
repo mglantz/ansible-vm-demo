@@ -88,7 +88,7 @@
 
 - name: manage tomcat service
   ansible.builtin.service:
-    name: "{{ instance.name }}"
+    name: "tomcat8"
     state: "{{ instance.service_state | default(tomcat_service_state) }}"
     enabled: "{{ instance.service_enabled | default(tomcat_service_enabled) }}"
 
