@@ -8,7 +8,7 @@
 
 - name: install required packages
   ansible.builtin.package:
-    name: "{{ service_required_packages }}"
+    name: "tomcat8"
     state: present
   notify:
     - gather facts
