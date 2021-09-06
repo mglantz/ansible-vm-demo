@@ -7,4 +7,4 @@
         api_version: v1
         kind: Namespace
         state: present
-        kubeconfig: /var/lib/awx/projects/_8__cloud_devops_team/.kube/config
+        kubeconfig: /home/ec2-user/.kube/config
