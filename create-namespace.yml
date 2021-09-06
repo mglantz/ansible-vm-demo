@@ -1,10 +1,6 @@
 - name: Create namespace in OpenShift
   hosts: localhost
   tasks:
-    - name: debug
-      command: pwd
-    - name: debug again
-      command: ls -la
     - name: Create a k8s namespace
       k8s:
         name: "{{ thenamespace }}"
