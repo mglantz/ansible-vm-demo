@@ -5,7 +5,7 @@
   gather_facts: no
   tasks:
     - name: Deploy Grafana chart on 5.6.0 from url to helm-test namespace
-      community.kubernetes.helm:
+      helm:
         name: test
         chart_ref: "https://github.com/grafana/helm-charts/releases/download/grafana-5.6.0/grafana-5.6.0.tgz"
         release_namespace: helm-test
