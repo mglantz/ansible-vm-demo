@@ -7,4 +7,4 @@
         api_version: v1
         kind: Namespace
         state: present
-        kubeconfig: /var/lib/awx/.ansible/.kube/config
+        kubeconfig: /var/lib/awx/projects/_8__cloud_devops_team/.kube/config
