@@ -1,2 +1,4 @@
-# from galaxy
-- src: RedHatOfficial.rhel9_pci_dss
+---
+collections:
+# With just the collection name
+- RedHatOfficial.rhel9_pci_dss
