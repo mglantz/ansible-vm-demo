@@ -1,4 +1,2 @@
 ---
-collections:
-# With just the collection name
-- RedHatOfficial.rhel9_pci_dss
+src: https://github.com/RedHatOfficial/ansible-role-rhel9-pci-dss
