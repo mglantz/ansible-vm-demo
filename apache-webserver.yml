@@ -1,0 +1,22 @@
+---
+- name: Ensure Apache web server is installed and running
+  hosts: all
+  gather_facts: false
+  become: true
+  tasks:
+    - name: "Ensure apache webserver is installed"
+      yum:
+        name: httpd
+        state: present
+
+    - name: "Ensure firewall openings are in place."
+      firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+        immediate: yes
+
+    - name: "Ensure apache webserver is started"
+      service:
+        name: httpd
+        state: restarted
