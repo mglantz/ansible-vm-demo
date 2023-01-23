@@ -6,7 +6,9 @@
   tasks:
     - name: "Ensure apache webserver is installed"
       yum:
-        name: httpd
+        name: 
+          - httpd
+          - firewalld
         state: present
 
     - name: "Ensure firewall openings are in place."
