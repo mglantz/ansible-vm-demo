@@ -4,12 +4,17 @@
   gather_facts: false
   become: true
   tasks:
-    - name: "Ensure apache webserver is installed"
+    - name: "Ensure apache webserver and firewalld is installed"
       yum:
         name: 
           - httpd
           - firewalld
         state: present
+        
+    - name: "Ensure firewalld is started"
+      service:
+        name: firewalld
+        state: started
 
     - name: "Ensure firewall openings are in place."
       firewalld:
@@ -21,4 +26,4 @@
     - name: "Ensure apache webserver is started"
       service:
         name: httpd
-        state: restarted
+        state: started
