@@ -4,7 +4,7 @@
   vars_files:
     - vars/ec2.yaml
   tasks:
-  - name: Ensure a security group for VM systems is in place
+  - name: Create firewall rules - Security Group
     ec2_group:
       name: "{{ ec2_security_group_vm_systems }}"
       description: Security Group for VMs
@@ -20,7 +20,7 @@
         - proto: all
           cidr_ip: 0.0.0.0/0
 
-  - name: Provision the systems which are to be managed with Ansible
+  - name: Provision virtual machines in Amazon EC2
     ec2:
       aws_access_key: "{{ec2_access_key}}"
       aws_secret_key: "{{ec2_secret_key}}"
